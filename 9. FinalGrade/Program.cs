@@ -1,13 +1,16 @@
-﻿using System;
-using System.Linq;
-
-namespace Solution
+﻿namespace StudentsGrades
 {
-    public class Grades
+    internal class Program
     {
-        public static int FinalGrade(int exam, int projects)
+        public static void Main(string[] args)
         {
-            if (exam > 90||projects>10)
+            int FinalGrade = Grades(50, 5);
+            Console.WriteLine("final grade is " + FinalGrade);
+        }
+
+        public static int Grades(int exam, int projects)
+        {
+            if (exam > 90 || projects > 10)
             {
                 return 100;
             }
@@ -15,7 +18,7 @@ namespace Solution
             {
                 return 90;
             }
-            else if (exam > 50  && projects >= 2)
+            else if (exam > 50 && projects >= 2)
             {
                 return 75;
             }
@@ -23,6 +26,6 @@ namespace Solution
             {
                 return 0;
             }
-        }       
+        }
     }
 }
