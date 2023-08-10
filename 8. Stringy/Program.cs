@@ -1,15 +1,22 @@
-﻿public class Kata
+﻿namespace Stringy
 {
-    public static string Stringy(int size)
+    internal class Program
     {
-        char[] result = new char[size];
-
-        for (int i = 0; i < size; i++)
+        static void Main(string[] args)
         {
-            result[i] = i % 2 == 0 ? '1' : '0';
+            string BinaryCode = stringy(89);
+            Console.WriteLine(BinaryCode);
         }
 
-        return new string(result);
+        public static string stringy(int size)
+        {
+            char[] result = new char[size];
 
+            for (int i = 0; i < size; i++)
+            {
+                result[i] = i % 2 == 0 ? '1' : '0';
+            }
+            return new string(result);
+        }
     }
 }

@@ -1,16 +1,22 @@
-﻿using System;
-
-public static class Kata
+﻿namespace Quadrants
 {
-    public static string CountSheep(int n)
+    internal class Program
     {
-        string sheep = "";
-        for (int i = 1; i <= n; i++)
+        public static void Main(string[] args)
         {
-            sheep += $"{i} sheep...";
-
+            string NumberOfSheeps = Sheeps(5);
+            Console.WriteLine(NumberOfSheeps);
         }
-        return sheep;
 
+        public static string Sheeps(int n)
+        {
+            string sheep = "";
+
+            for (int i = 1; i <= n; i++)
+            {
+                sheep += $"{i} sheep...";
+            }
+            return sheep;
+        }
     }
 }

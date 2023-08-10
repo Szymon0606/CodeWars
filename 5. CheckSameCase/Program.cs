@@ -1,21 +1,27 @@
-﻿class Program
+﻿namespace SameCase
 {
-    static int CheckSameCase(char char1, char char2)
+    internal class Program
     {
-        if (!char.IsLetter(char1) || !char.IsLetter(char2))
+        public static void Main(string[] args)
         {
-            // If either character is not a letter, return -1
-            return -1;
+            int CheckSameCase = SameCase('a', 'b');
+            Console.WriteLine(CheckSameCase);
         }
-        else if (char.IsUpper(char1) == char.IsUpper(char2))
+
+        public static int SameCase(char char1, char char2)
         {
-            // If both characters are the same case, return 1
-            return 1;
-        }
-        else
-        {
-            // If both characters are letters but not the same case, return 0
-            return 0;
+            if (!char.IsLetter(char1) || !char.IsLetter(char2))
+            {
+                return -1;
+            }
+            else if (char.IsUpper(char1) == char.IsUpper(char2))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }

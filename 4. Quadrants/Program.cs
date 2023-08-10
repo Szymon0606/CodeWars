@@ -1,22 +1,31 @@
-﻿class Program
+﻿namespace Quadrants
 {
-    static int Main(int x, int y)
+    internal class Program
     {
-        if (x > 0 && y > 0)
-        {           
-            return 1;
-        }
-        else if (x < 0 && y > 0)
+        public static void Main(string[] args)
         {
-            return 2;
+            int QuadrantNumber = Quadrants(2, 3);
+            Console.WriteLine(QuadrantNumber);
         }
-        else if (x < 0 && y < 0)
+
+        static int Quadrants(int x, int y)
         {
-            return 3;
-        }
-        else
-        {           
-            return 4;
+            if (x > 0 && y > 0)
+            {
+                return 1;
+            }
+            else if (x < 0 && y > 0)
+            {
+                return 2;
+            }
+            else if (x < 0 && y < 0)
+            {
+                return 3;
+            }
+            else
+            {
+                return 4;
+            }
         }
     }
 }

@@ -1,8 +1,18 @@
-﻿public class Kata
+﻿namespace ChangeString
 {
-    public static string Main(string input)
+    internal class Program
     {
-        string uppercaseString = input.ToUpper();
-        return uppercaseString;
+        public static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string AfterMethod = UpperCase(input);
+            Console.WriteLine(AfterMethod);
+        }
+
+        public static string UpperCase(string input)
+        {
+            string UpperCaseString = input.ToUpper();
+            return UpperCaseString;
+        }
     }
 }

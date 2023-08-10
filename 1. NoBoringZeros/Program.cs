@@ -1,26 +1,29 @@
-﻿public class NoBoring
+﻿namespace ZerosAreBoring
 {
-    public static int NoBoringZeros(int number)
+    internal class Program
     {
-        if (number == 0)
+        public static void Main(string[] args)
         {
-            return 0;
-        }
-        while (number % 10 == 0)
-        {
-            number /= 10;
-        }
-        return number;
-    }
+            int[] numbers = { 2020, 900010, 120, -20010 };
 
-    public static void Main(string[] args)
-    {
-        int[] numbers = { 2020, 900010, 120, -20010 };
+            foreach (int number in numbers)
+            {
+                int result = NoBoringZeros(number);
+                Console.WriteLine($"{number}->{result}");
+            }
+        }
 
-        foreach (int number in numbers)
+        public static int NoBoringZeros(int number)
         {
-            int result = NoBoringZeros(number);
-            Console.WriteLine($"{number}->{result}");
+            if (number == 0)
+            {
+                return 0;
+            }
+            while (number % 10 == 0)
+            {
+                number /= 10;
+            }
+            return number;
         }
     }
 }
