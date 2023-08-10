@@ -19,7 +19,7 @@ public static class Kata2
         }
         else
         {
-            return "Hello, " + name + "!";
+            return $"Hello,{name} !";
         }
     }
 }
